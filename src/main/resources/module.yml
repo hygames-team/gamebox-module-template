@@ -1,0 +1,11 @@
+id: "module-template"
+name: "Module template"
+authors:
+  - "You"
+  - "Maybe some other author"
+description: "This module is only an example"
+sourceUrl: "https://github.com/hygames-team/gamebox-module-template"
+version: "0.0.2"
+dependencies:
+  - id: "gamebox"
+    versionConstrain: "0.0.2"
