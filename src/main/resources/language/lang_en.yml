@@ -1,0 +1,8 @@
+example: "This is an example message"
+
+categoryName:
+  messageInCategory: "I am in a category"
+  aList:
+    - "Hi"
+    - "My name is"
+    - "Slim shady"
