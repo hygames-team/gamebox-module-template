@@ -1,7 +1,5 @@
 package co.hygames.gamebox.modules.template;
 
-import co.hygames.gamebox.exceptions.language.LanguageException;
-import co.hygames.gamebox.language.GameBoxLanguage;
 import co.hygames.gamebox.language.Language;
 import co.hygames.gamebox.language.ModuleLanguage;
 import co.hygames.gamebox.language.messages.Message;
@@ -14,28 +12,8 @@ public class TemplateLanguage extends ModuleLanguage {
 
     public TemplateLanguage(GameBoxModule module) {
         super(module);
-    }
-
-    @Override
-    protected void loadMessages() {
-        for (GameBoxLanguage.Messages message : GameBoxLanguage.Messages.values()) {
-            try {
-                loadMessage(message.getKey());
-            } catch (LanguageException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    @Override
-    protected void loadLists() {
-        for (GameBoxLanguage.Lists list : GameBoxLanguage.Lists.values()) {
-            try {
-                loadList(list.getKey());
-            } catch (LanguageException e) {
-                e.printStackTrace();
-            }
-        }
+        Messages.language = this;
+        Lists.language = this;
     }
 
     public enum Messages implements Message<String> {
